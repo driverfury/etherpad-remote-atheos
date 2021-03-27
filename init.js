@@ -6,7 +6,7 @@
 
 	atheos.etherpad_remote = {
 
-        etherpad_remote_api: 'http://127.0.0.1/etherpad-remote/public/api/start',
+        etherpad_remote_url: 'http://127.0.0.1/etherpad-remote/public/api/start',
 
 		init: function() {
 			if (self) return;
@@ -17,7 +17,7 @@
 
 		openPad: function(path) {
             var xhr = new XMLHttpRequest();
-            xhr.open('POST', this.etherpad_remote_api . '/api/start', true);
+            xhr.open('POST', this.etherpad_remote_url . '/api/start', true);
             xhr.setRequestHeader("Content-Type", "application/json");
 
             xhr.onreadystatechange = function() {
