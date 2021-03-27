@@ -17,7 +17,7 @@
 
 		openPad: function(path) {
             var xhr = new XMLHttpRequest();
-            xhr.open('POST', this.etherpad_remote_api, true);
+            xhr.open('POST', this.etherpad_remote_api . '/api/start', true);
             xhr.setRequestHeader("Content-Type", "application/json");
 
             xhr.onreadystatechange = function() {
