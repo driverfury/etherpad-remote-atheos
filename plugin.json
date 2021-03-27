@@ -1,0 +1,15 @@
+{
+	"author": ["driverfury"],
+	"name": "Etherpad remote",
+	"description": "Etherpad remote plugin for Atheos",
+	"category": "Common",
+	"status": "available",	
+	"version": "v1.0.0",
+	"url": "https://github.com/driverfury/etherpad-remote-atheos",
+	"contextmenu": [{
+		"action": "atheos.etherpad_remote.openPad(oX('#contextmenu').attr('data-path'));",
+		"icon": "fas fa-users",
+		"applies-to": "file-only",
+		"title": "Open with Etherpad"
+	}]
+}
