@@ -9,6 +9,6 @@ Clicking on "Open with Etherpad" option will open the instance of etherpad runni
 Configuration is pretty straightforward, you only need to set the URL on which [etherpad remote](https://github.com/driverfury/etherpad-remote) is hosted inside the ```init.js``` file:
 ```javascript
 [...]
-        etherpad_remote_url: 'http://<etherpad_remote_url>',
+            this.etherpad_remote_url = 'http://<etherpad_remote_url>';
 [...]
 ```

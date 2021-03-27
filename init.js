@@ -6,18 +6,16 @@
 
 	atheos.etherpad_remote = {
 
-        etherpad_remote_url: 'http://127.0.0.1/etherpad-remote/public/api/start',
-
 		init: function() {
 			if (self) return;
 			self = this;
 
-			// Start your plugin here...
+            this.etherpad_remote_url = 'http://127.0.0.1/etherpad-remote/public';
 		},
 
 		openPad: function(path) {
             var xhr = new XMLHttpRequest();
-            xhr.open('POST', this.etherpad_remote_url . '/api/start', true);
+            xhr.open('POST', this.etherpad_remote_url + '/api/start', true);
             xhr.setRequestHeader("Content-Type", "application/json");
 
             xhr.onreadystatechange = function() {
@@ -39,7 +37,7 @@
                 file: path,
             }
             xhr.send(JSON.stringify(data));
-	    }
+	    },
     };
 
 })();
